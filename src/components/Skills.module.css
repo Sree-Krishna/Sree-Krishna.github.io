@@ -1,8 +1,10 @@
 .skills {
-    padding-top: 20px;
-    height: 100vh;
-    justify-content: space-between;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    max-width: 360px; 
-    display: overflow;
+    min-height: 100vh;
+    background-color: goldenrod;
+    background-size: cover;
+    background-position: center;
+    color: white;
 }
