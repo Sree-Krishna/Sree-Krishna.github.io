@@ -1,0 +1,78 @@
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('../resources/earth.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+  }
+
+  
+/* Style the text container */
+.container {
+    max-width: 360px; /* Example width for responsiveness */
+    margin: 0 auto;
+}
+
+.aboutText {
+text-align: justify;
+line-height: 1.5;
+}
+
+/* Style the title */
+.aboutText h2 {
+font-size: 2em;
+margin-bottom: 20px;
+}
+
+/* Style the paragraph text */
+.noDisplay,
+.aboutText p {
+font-size: 14px;
+margin-bottom: 15px;
+font-family: 'Poppins', sans-serif;
+opacity: 0; /* Initial opacity set to 0 for invisible state */
+transition: opacity 0.8s ease-in-out; /* Adjust transition properties as needed */
+}
+
+.aboutText p.visible {
+    opacity: 1; /* Opacity set to 1 for visible state */
+  }
+
+/* Style the social links container */
+.socialLinks {
+display: flex;
+justify-content: center;
+margin-top: 20px;
+transition: opacity 0.8s ease-in-out;
+}
+
+/* Style the social media icons */
+.socialLinks a {
+margin-right: 10px;
+color: white;
+font-size: 20px;
+transition: transform 0.2s ease; /* Adjust transition as needed */
+}
+
+.socialLinks a:hover {
+font-size: 40px;
+transition: font-size 0.2s ease;
+transform: translateY(-5px); /* Adjust vertical movement for pop-up effect */
+box-shadow: 0px 2px 5px rgb(255, 255, 255); /* Subtle shadow for depth */
+}
+
+/* Optional: Media Queries for responsiveness */
+@media (max-width: 768px) {
+.row {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.aboutText {
+    order: 2;
+}
+}
+
