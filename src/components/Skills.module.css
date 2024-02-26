@@ -1,0 +1,8 @@
+.skills {
+    padding-top: 20px;
+    height: 100vh;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 360px; 
+    display: overflow;
+}
