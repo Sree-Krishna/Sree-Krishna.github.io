@@ -41,7 +41,7 @@ const Navbar = () => {
   return (
     <nav className={styles.nav}>
       <a href="#about-section">
-        <img src="srk.png" alt="Signature" className={styles.sign} />
+        <div className={styles.sign}></div>
       </a>
       <div className={styles.navLink}>
         <span className={`${currentSection === 'about-section' ? styles.active : ''}`}>

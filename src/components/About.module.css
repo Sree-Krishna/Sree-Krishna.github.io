@@ -1,35 +1,87 @@
 .about {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-image: url('../resources/earth.jpg');
-    background-size: cover;
-    background-position: center;
-    color: white;
-  }
+  display: flex;
+  flex-direction: column; /* Change to column */
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url('../resources/earth.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
 
+.containerOne {
+  display: flex;
+  flex-direction: column; /* Change to row */
+  align-items: center;
+  height: auto; /* Change to auto */
+  margin-bottom: 20px; /* Add margin bottom to separate containers */
+  transition: opacity 0.8s ease-in-out;
+}
+
+.hi {
+  opacity:70%;
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  display: 'inline-block';
+  margin: 0;
+  text-shadow: 1px 1px 2px #000000, 0 0 0 #000000, 1px 1px 2px #000000; /* 3D effect */
+}
+
+.sreeKrishna {
+  opacity:90%;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  font-size: 60px;
+  font-weight: 600;
   
-/* Style the text container */
-.container {
-    max-width: 360px; /* Example width for responsiveness */
-    margin: 0 auto;
 }
 
-.aboutText {
-text-align: justify;
-line-height: 1.5;
+.suresh {
+  opacity:60%;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  opacity:'85%';
+  font-size: 60px;
+  font-weight: 700;
 }
 
-/* Style the title */
-.aboutText h2 {
-font-size: 2em;
-margin-bottom: 20px;
+.roles {
+  opacity: 80%;
+  color: white;
+  font-Size: 40px;
+  font-Weight: 600;
+  text-shadow: 1px 1px 2px #000000, 0 0 0 #000000, 1px 1px 2px #000000; /* 3D effect */
+}
+
+.resume a{
+  color: white; /* Adjust color as desired */
+  text-decoration: none; /* Remove default underline */
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  opacity: 80%;
+  font-size: 12px;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 1px 10px rgba(255, 255, 255, 0.8); /* Shadow properties */
+  border-radius: 15px; /* Rounded corners */
+  padding: 5px;
+
+}
+
+.resume a:hover{
+  background-color: white; /* White background */
+  color: black;  /* Black text */
+  border-radius: 20px; /* Add rounded corners */
+  padding: 5px 10px;  /* Add some padding for visual balance */
+  transition: all 0.2s ease-in-out; 
+  font-size: 12px;
+  font-weight: bold;
+  opacity: 70%;
 }
 
 /* Style the paragraph text */
-.noDisplay,
-.aboutText p {
+.noDisplay {
 font-size: 14px;
 margin-bottom: 15px;
 font-family: 'Poppins', sans-serif;
@@ -37,16 +89,15 @@ opacity: 0; /* Initial opacity set to 0 for invisible state */
 transition: opacity 0.8s ease-in-out; /* Adjust transition properties as needed */
 }
 
-.aboutText p.visible {
-    opacity: 1; /* Opacity set to 1 for visible state */
-  }
 
 /* Style the social links container */
 .socialLinks {
 display: flex;
 justify-content: center;
-margin-top: 20px;
+align-items: center;
+margin-top: 25px;
 transition: opacity 0.8s ease-in-out;
+padding-left: 15px;
 }
 
 /* Style the social media icons */
@@ -64,15 +115,18 @@ transform: translateY(-5px); /* Adjust vertical movement for pop-up effect */
 box-shadow: 0px 2px 5px rgb(255, 255, 255); /* Subtle shadow for depth */
 }
 
-/* Optional: Media Queries for responsiveness */
-@media (max-width: 768px) {
-.row {
-    display: flex;
-    flex-direction: column-reverse;
-}
 
-.aboutText {
-    order: 2;
-}
+.downArrow{
+  /* display: flex;
+  opacity: 1;
+  height: 70px;
+  width:70px;
+  background-color: black; */
+  height: 60px;
+  width:60px;
+  display: flex;
+  background-size: cover;
+  background-position: center;
+  background-image: url("../resources/Arrow-Down.gif");
 }
 

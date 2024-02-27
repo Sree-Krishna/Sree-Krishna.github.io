@@ -33,10 +33,13 @@
 } */
 
 .sign {
-  width: 180px;
   height: 40px;
-  object-fit: cover;
-  object-position: 100% 50%;
+  width: 40px;
+  display: absolute;
+  background-size: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("../resources/sk_w_logo.png");
 }
 
 .navLink a{

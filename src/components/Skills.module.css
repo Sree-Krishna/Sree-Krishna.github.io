@@ -3,8 +3,8 @@
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: goldenrod;
+    background-color: lightgray;
     background-size: cover;
     background-position: center;
-    color: white;
+    color: black;
 }
