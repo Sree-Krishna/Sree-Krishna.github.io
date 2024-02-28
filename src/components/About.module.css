@@ -4,10 +4,11 @@
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-image: url('../resources/earth.jpg');
+  background-image: url('../resources/port15.jpg');
   background-size: cover;
   background-position: center;
   color: white;
+  padding-bottom: 40px;
 }
 
 .containerOne {
@@ -15,12 +16,13 @@
   flex-direction: column; /* Change to row */
   align-items: center;
   height: auto; /* Change to auto */
+  margin-top: 50px;
   margin-bottom: 20px; /* Add margin bottom to separate containers */
   transition: opacity 0.8s ease-in-out;
 }
 
 .hi {
-  opacity:70%;
+  opacity:90%;
   font-family: 'Poppins', sans-serif;
   font-size: 20px;
   display: 'inline-block';
@@ -28,8 +30,9 @@
   text-shadow: 1px 1px 2px #000000, 0 0 0 #000000, 1px 1px 2px #000000; /* 3D effect */
 }
 
-.sreeKrishna {
-  opacity:90%;
+.sreeKrishna,
+.suresh {
+  opacity:100%;
   font-family: 'Poppins', sans-serif;
   color: white;
   font-size: 60px;
@@ -37,17 +40,17 @@
   
 }
 
-.suresh {
+/* .suresh {
   opacity:60%;
   font-family: 'Poppins', sans-serif;
-  color: white;
+  color: #bef1fd;;
   opacity:'85%';
   font-size: 60px;
   font-weight: 700;
-}
+} */
 
 .roles {
-  opacity: 80%;
+  opacity: 100%;
   color: white;
   font-Size: 40px;
   font-Weight: 600;
@@ -59,11 +62,11 @@
   text-decoration: none; /* Remove default underline */
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
-  opacity: 80%;
+  opacity: 100%;
   font-size: 12px;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 1px 10px rgba(255, 255, 255, 0.8); /* Shadow properties */
+  box-shadow: 0 1px 10px rgba(255, 255, 255, 1); /* Shadow properties */
   border-radius: 15px; /* Rounded corners */
   padding: 5px;
 
@@ -77,7 +80,7 @@
   transition: all 0.2s ease-in-out; 
   font-size: 12px;
   font-weight: bold;
-  opacity: 70%;
+  opacity: 100%;
 }
 
 /* Style the paragraph text */

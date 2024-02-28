@@ -1,10 +1,68 @@
 .skills {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: lightgray;
+    flex-wrap: wrap;
+    flex-direction: row; /* Arrange divs horizontally */
+    justify-content: space-around; 
+    /* background-color: #adafa1; */
+    background-color: #fff;
     background-size: cover;
     background-position: center;
     color: black;
+    padding: 40px 0;
 }
+
+.programming,
+.dataScience,
+.webDevelopment {
+    transition: opacity 0.8s ease-in-out;
+    width: calc(30% - 10px); /* Adjust width accounting for margins */
+    margin: 10px;
+    padding: 10px;
+    font-family: 'Poppins', sans-serif;
+    background-color: #eeeeee;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+}
+
+.programming span,
+.dataScience span,
+.webDevelopment span {
+    transition: opacity 0.8s ease-in-out;
+    text-shadow: 1px 1px 2px #ffffff, 0 0 0 #000000, 1px 1px 2px #000000; /* 3D effect */
+    font-size: 20px;
+    text-align: center; /* Center justify the text */
+    width: 100%; /* Ensure the text takes full width */
+    display: block; /* Ensure the span behaves as a block element */
+    margin-bottom: 10px; 
+    margin-top: 10px;/* Add margin for spacing */
+}
+
+.icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+ }
+
+ .icons div {
+    padding: 1px;
+ }
+
+ .icons span{
+    font-size: 12px;
+    margin: 0;
+    text-align: 'center'
+ }
+
+.icons img {
+    width: 40px; /* Adjust the width of the icons */
+    height: 40px; /* Adjust the height of the icons */
+    margin: 5px; /* Add margin for spacing between icons */
+  }
+
+  .noSkills {
+    opacity: 0; /* Initial opacity set to 0 for invisible state */
+    transition: opacity 0.8s ease-in-out; /* Adjust transition properties as needed */
+    min-height: 100vh;
+  }

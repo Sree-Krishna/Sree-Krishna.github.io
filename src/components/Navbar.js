@@ -18,7 +18,7 @@ const Navbar = () => {
         const sectionElement = document.getElementById(sectionId);
         if (sectionElement) {
           const rect = sectionElement.getBoundingClientRect();
-          const padding = 300; // Adjust as needed
+          const padding = window.innerHeight/2.2; // Adjust as needed
           return rect.top >= -padding && rect.bottom <= window.innerHeight + padding;
         }
         return false;
