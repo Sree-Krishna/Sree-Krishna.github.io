@@ -56,9 +56,8 @@ const Skills = () => {
       <div className={visible ? styles.dataScience: styles.noSkills}>
       <span>DATA SCIENCE & MACHINE LEARNING</span>
         <div className={styles.icons}>
-        <img src="\images\skills\tensorflow.svg" alt="Python" />
-          <img src="\images\skills\tensorflow.svg" alt="Python" />
-          <img src="\images\skills\tensorflow.svg" alt="Python" />
+        <img src="\images\skills\tensorflow.svg" alt="Tenorflow" />
+          <img src="\images\skills\PyTorch.png" alt="PyTorch" />
           <img src="\images\skills\tensorflow.svg" alt="Python" />
           <img src="\images\skills\tensorflow.svg" alt="Python" />
           <img src="\images\skills\tensorflow.svg" alt="Python" />
