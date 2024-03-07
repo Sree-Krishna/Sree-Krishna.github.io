@@ -56,6 +56,39 @@ const Skills = () => {
       <div className={visible ? styles.dataScience: styles.noSkills}>
       <span>DATA SCIENCE & MACHINE LEARNING</span>
         <div className={styles.icons}>
+          <div>
+          <img src="\images\skills\tensorflow.svg" alt="TensorFlow" />
+          <span>TensorFlow</span>
+          </div>
+          <div>
+          <img src="\images\skills\PyTorch.svg" alt="PyTorch" />
+          <span>PyTorch</span>
+          </div>
+          <div>
+          <img src="\images\skills\numpy.svg" alt="numpy" />
+          <span>numpy</span>
+          </div>
+          <div>
+          <img src="\images\skills\matplotlib.jpg" alt="Matplotlib" />
+          <span>Matplotlib</span>
+          </div>
+          <div>
+          <img src="\images\skills\jupyter.svg" alt="jupyter" />
+          <span>Jupyter</span>
+          </div>
+          <div>
+          <img src="\images\skills\colab.svg" alt="C++" />
+          <span>colab</span>
+          </div>
+          <div>
+          <img src="\images\skills\colab.svg" alt="C++" />
+          <span>colab</span>
+          </div>
+          <div>
+          <img src="\images\skills\colab.svg" alt="C++" />
+          <span>colab</span>
+          </div>
+
         <img src="\images\skills\tensorflow.svg" alt="Tenorflow" />
           <img src="\images\skills\PyTorch.png" alt="PyTorch" />
           <img src="\images\skills\tensorflow.svg" alt="Python" />
