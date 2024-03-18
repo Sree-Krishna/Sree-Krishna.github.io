@@ -56,7 +56,7 @@ const About = () => {
           </div>
         </div>
         <div className = {styles.myskills}>
-          {/* <Skills /> */}
+          <Skills/>
         </div>
       </div>
     </section>

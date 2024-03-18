@@ -30,6 +30,11 @@
   flex-direction: row; /* Change to row */
 }
 
+.myskills {
+  display: flex;
+  width: 100%;
+}
+
 .aboutProfilePicture {
   width: 200px; /* Set image width */
   height: 200px; /* Set image height */

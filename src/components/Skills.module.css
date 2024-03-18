@@ -1,65 +1,97 @@
 .skills {
-    display: flex;
-    /* flex-wrap: wrap; */
-    flex-direction: row; /* Arrange divs horizontally */
-    /* justify-content: space-around;  */
-    /* background-color: #adafa1; */
-    color: black;
+  display: flex; /* Make "skills" section a flexbox container */
+  flex-wrap: wrap; /* Allow icons to wrap to multiple lines */
+  justify-content: space-between; /* Distribute icons evenly */
+  width: 100%;
+  margin-top: 25px;
+  color: black;
 }
 
-.programming,
-.dataScience,
-.webDevelopment {
-    transition: opacity 0.8s ease-in-out;
-    width: calc(30% - 10px); /* Adjust width accounting for margins */
-    margin: 10px;
-    padding: 10px;
-    font-family: 'Poppins', sans-serif;
-    background-color: #eeeeee;
-    border-radius: 25px;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center items horizontally */
+.iconCarousel {
+  display: contents;
+  align-items: center;
+  flex: row;
+  /* width: fit-content; Adjust width as needed */
+  width: 100%;
+  margin: 0 auto; /* Center horizontally */
+  text-align: center; /* Center text below the icon */
 }
 
-.programming span,
-.dataScience span,
-.webDevelopment span {
-    transition: opacity 0.8s ease-in-out;
-    text-shadow: 1px 1px 2px #ffffff, 0 0 0 #000000, 1px 1px 2px #000000; /* 3D effect */
-    font-size: 20px;
-    text-align: center; /* Center justify the text */
-    width: 100%; /* Ensure the text takes full width */
-    display: block; /* Ensure the span behaves as a block element */
-    margin-bottom: 10px; 
-    margin-top: 10px;/* Add margin for spacing */
+.arrow {
+  position: relative;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  opacity: 0.5;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.arrowright,
+.arrowleft {
+  height:20px;
+  width: 20px;
+}
+
+.arrowleft{
+  float: left;
+}
+
+.arrow:hover,
+.arrow:focus {
+  opacity: 1;
+}
+
+.arrow.disabled {
+  cursor: default;
+  opacity: 0.2;
+}
+
+.iconContainer {
+  display: flex;
+  flex-wrap: wrap; /* Allow icons to wrap to multiple lines */
+  justify-content: space-between; /* Distribute icons evenly */
+  padding-bottom: 10px;
 }
 
 .icons {
-    max-width: 250px;
+  width: 40px; /* Adjust icon size as needed */
+  height: 40px;
+  text-align: center; /* Center text below the icon */
+  margin: 0 7px;
+}
+
+.iconContainer span{
+  text-align: 'center';
+  display: block; /* Make the span occupy a full line */
+  font-size: 12px;
+  padding:0 5px;
+}
+
+.navigate {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
- }
+  width: 100%;
+  margin-top: 8px;
+  background-color: rgba(0, 0, 0, 0.2); 
+  justify-content: space-between; 
+  height: 20px;
+  /* text-shadow: 0px 1px 1px #000000, 0 0 0 #ffffff, 0px 1px 1px #000000; 3D effect */
+}
 
- .icons div {
-    padding: 1px;
- }
-
- .icons span{
-    font-size: 12px;
-    margin: 0;
-    text-align: 'center'
- }
-
-.icons img {
-    width: 40px; /* Adjust the width of the icons */
-    height: 40px; /* Adjust the height of the icons */
-    margin: 5px; /* Add margin for spacing between icons */
-  }
-
-  .noSkills {
-    opacity: 0; /* Initial opacity set to 0 for invisible state */
-    transition: opacity 0.8s ease-in-out; /* Adjust transition properties as needed */
-    min-height: 100vh;
-  }
+.navigate a {
+  width: 100%;
+  display: flex;
+  padding: 0 10px;
+  text-align: 'center';
+  justify-content: space-between; 
+  text-decoration: none; /* Remove default underline */
+  color: white;
+  font-size: 14px;
+}
+.navigate a:hover,
+.navigate .active a {
+  font-size: 14px;
+  color: black;
+  /* background-color: rgba(0, 0, 0, 0.2);  */
+  /* border-radius: 25px; */
+}

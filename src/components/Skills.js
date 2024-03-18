@@ -1,82 +1,114 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useState } from 'react';
 import styles from './Skills.module.css';
 
+const iconsSkills = [[
+  // Replace these with your actual icon data (names, paths, etc.)
+  { name: 'Airflow', path: '/images/skills/airflow.svg' },
+  { name: 'TeamCity', path: '/images/skills/teamcity.svg' },
+  { name: 'Terraform', path: '/images/skills/terraform.svg' },
+  { name: 'PyCharm', path: '/images/skills/PyCHarm.svg' },
+  { name: 'VS Code', path: '/images/skills/VScode.svg' },
+  { name: 'Jenkins', path: '/images/skills/jenkins.svg' },
+  { name: 'Jira', path: '/images/skills/jira.svg' },
+  { name: 'Jupyter', path: '/images/skills/jupyter.svg' },
+  { name: 'Docker', path: '/images/skills/docker.png' },
+  { name: 'colab', path: '/images/skills/colab.svg' },
+  { name: 'Anaconda', path: '/images/skills/Anaconda.svg' },
+  { name: 'InteliiJ', path: '/images/skills/Intellij.svg' },
+],
+[
+  // Replace these with your actual icon data (names, paths, etc.)
+  { name: 'Python', path: '/images/skills/python.png' },
+  { name: 'Java', path: '/images/skills/java.png' },
+  { name: 'C++', path: '/images/skills/c-plus-plus.svg' },
+  { name: 'Angular', path: '/images/skills/angular.svg' },
+  { name: 'TypeScript', path: '/images/skills/typescript.png' },
+  { name: 'React', path: '/images/skills/react.png' },
+  { name: 'Streamlit', path: '/images/skills/streamlit.svg' },
+  { name: 'FastAPI', path: '/images/skills/fastapi.svg' },
+  { name: 'Spring', path: '/images/skills/spring.svg' },
+  { name: 'HTML5', path: '/images/skills/html.png' },
+  { name: 'CSS', path: '/images/skills/css.png' },
+  { name: 'JavaScript', path: '/images/skills/javascript-js.svg' }
+],
+[
+  // Replace these with your actual icon data (names, paths, etc.)
+  { name: 'TensorFlow', path: '/images/skills/tensorflow.svg' },
+  { name: 'PyTorch', path: '/images/skills/PyTorch.svg' },
+  { name: 'Numpy', path: '/images/skills/numpy.svg' },
+  { name: 'Pandas', path: '/images/skills/pandas.svg' },
+  { name: 'Scikit-Learn', path: '/images/skills/sk-learn.jpg' },
+  { name: 'Matplotlib', path: '/images/skills/Matplotlib.svg' },
+  { name: 'Tableau', path: '/images/skills/tableau.svg' },
+  { name: 'PowerBI', path: '/images/skills/powerbi.svg' },
+  { name: 'AWS', path: '/images/skills/aws.svg' },
+  { name: 'SageMaker', path: '/images/skills/sagemaker.svg' },
+  { name: 'PySpark', path: '/images/skills/apache_spark.svg' },
+],
+[
+  // Replace these with your actual icon data (names, paths, etc.)
+  { name: 'SQL', path: '/images/skills/mysql.png' },
+  { name: 'PostgreSQL', path: '/images/skills/postgresql.svg' },
+  { name: 'MongoDB', path: '/images/skills/mongodb-original.svg' },
+  { name: 'ElasticDB', path: '/images/skills/elasticsearch.svg' },
+  { name: 'Swagger', path: '/images/skills/swagger.svg' },
+  { name: 'Postman', path: '/images/skills/postman.svg' },
+  { name: 'Logstash', path: '/images/skills/logstash.svg' },
+  { name: 'GraphQL', path: '/images/skills/graphql.svg' },
+]];
+
+
 const Skills = () => {
-  const skillsRef = useRef(null);
-  const [visible, setVisible] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState(2);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          console.log('Skills is in View')
-          const timer = setTimeout(() => setVisible(true), 500); // Adjust delay as needed
-          observer.unobserve(skillsRef.current);
-          return () => clearTimeout(timer);
-        }
-      });
-    });
+  const handleLeftArrowClick = () => {
+    const newIndex = currentIndex - 1;
+    setCurrentIndex(newIndex);
+  };
 
-    if (skillsRef.current) {
-      observer.observe(skillsRef.current);
-    }
+  const handleRightArrowClick = () => {
+    const newIndex = (currentIndex + 1);
+    setCurrentIndex(newIndex);
+  };
 
-    return () => {
-      if (skillsRef.current) {
-        observer.unobserve(skillsRef.current);
-      }
-    };
-  }, []); // Empty dependency array ensures the effect runs only once
+  const handleLinkClick = (tag) => {
+    event.preventDefault();
+    setCurrentIndex(tag);
+  }
 
 
   return (
-    <section id="skills-section" ref={skillsRef} className={visible? styles.skills: styles.noSkills}>
-      <div className={visible ? styles.programming: styles.noSkills}>
-        <span>PROGRAMMING & TOOLS</span>
-        <div className={styles.icons}>
-          <div>
-          <img src="\images\skills\python.png" alt="Python" />
-          <span>Python</span>
-          </div>
-          <div>
-          <img src="\images\skills\git.png" alt="Git" />
-          <span>Git</span>
-          </div>
-          <div>
-          <img src="\images\skills\java.png" alt="Java" />
-          <span>Java</span>
-          </div>
-          <div>
-          <img src="\images\skills\c-plus-plus.svg" alt="C++" />
-          <span>C++</span>
-          </div>
-          {/* Add other icons as needed */}
+    <section id="skills-section" className={styles.skills}>
+      <div className={styles.iconCarousel}>
+        <button className={styles.arrow} onClick={handleLeftArrowClick} disabled={currentIndex === 0}>
+          <img className={styles.arrowleft} src="/images/skills/left.svg" />
+        </button>
+        <div className={styles.iconContainer}>
+          {iconsSkills[currentIndex].map((icon) => (
+            <div key={icon.name}>
+            <img src={icon.path} alt={icon.name} className={styles.icons} />
+            <span>{icon.name}</span>
+            </div>
+          ))}
         </div>
+        <button className={styles.arrow} onClick={handleRightArrowClick} disabled={currentIndex === 3}>
+        <img className={styles.arrowright} src="/images/skills/right.svg" />
+        </button>
       </div>
-      <div className={visible ? styles.dataScience: styles.noSkills}>
-      <span>DATA SCIENCE & MACHINE LEARNING</span>
-        <div className={styles.icons}>
-          <div><img src="\images\skills\tensorflow.svg" alt="TensorFlow" /><span>TensorFlow</span></div>
-          <div><img src="\images\skills\PyTorch.svg" alt="PyTorch" /><span>PyTorch</span></div>
-          <div><img src="\images\skills\numpy.svg" alt="numpy" /><span>numpy</span></div>
-          <div><img src="\images\skills\Matplotlib.svg" alt="Matplotlib" /><span>Matplotlib</span></div>
-          <div><img src="\images\skills\jupyter.svg" alt="jupyter" /><span>Jupyter</span></div>
-          <div><img src="\images\skills\colab.svg" alt="C++" /><span>colab</span></div>
-          <div><img src="\images\skills\colab.svg" alt="C++" /><span>colab</span></div>
-          <div><img src="\images\skills\colab.svg" alt="C++" /><span>colab</span></div>
-          {/* Add other icons as needed */}
-        </div>
+      <div className={styles.navigate}>
+        <span className={`${currentIndex === 0 ? styles.active : ''}`}>
+          <a href="#about-section" onClick={(event) => handleLinkClick(0)}>Developer Tools</a>
+        </span>
+        <span className={`${currentIndex === 1 ? styles.active : ''}`}>
+          <a href="#about-section" onClick={(event) => handleLinkClick(1)}>Programming & Web Development</a>
+        </span>
+        <span className={`${currentIndex === 2 ? styles.active : ''}`}>
+          <a href="#about-section" onClick={(event) => handleLinkClick(2)}>Data Science & Machine Learning</a>
+        </span>
+        <span className={`${currentIndex === 3 ? styles.active : ''}`}>
+          <a href="#about-section" onClick={(event) => handleLinkClick(3)}>Database & API</a>
+        </span>
       </div>
-      <div className={visible ? styles.webDevelopment: styles.noSkills}>
-      <span>WEB DEVELOPMENT</span>
-        <div className={styles.icons}>
-        <img src="\images\skills\css.png" alt="Python" />
-          <img src="\images\skills\typescript.png" alt="Python" />
-          <img src="\images\skills\react.png" alt="Python" />
-          {/* Add other icons as needed */}
-        </div>
-      </div>
-      
     </section>
   );
 };
