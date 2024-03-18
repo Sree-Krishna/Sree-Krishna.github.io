@@ -1,65 +1,63 @@
-import React, { useEffect, useState } from 'react';
-import styles from './About.module.css'; // Import statement
-import { IconButton } from '@mui/material';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import GitHubIcon from '@mui/icons-material/GitHub';
-import MailIcon from '@mui/icons-material/Mail';
+import React, { useEffect, useState, useRef } from 'react';
+import styles from './About.module.css'
+import Skills from './Skills';
+
 
 const About = () => {
+  const aboutRef = useRef(null);
   const [visible, setVisible] = useState(false);
-  const [roleIndex, setRoleIndex] = useState(0);
-  const roles = ['Data Scientist', 'Full Stack Developer', 'AI Enthusiast'];
 
   useEffect(() => {
-    const timer = setTimeout(() => setVisible(true), 500); // Adjust delay as needed
-    return () => clearTimeout(timer); // Cleanup function for timer
-  }, []);
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const timer = setTimeout(() => setVisible(true), 500); // Adjust delay as needed
+          observer.unobserve(aboutRef.current);
+          return () => clearTimeout(timer);
+        }
+      });
+    });
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setRoleIndex((prevIndex) => (prevIndex + 1) % roles.length);
-    }, 2000); // Change the duration of each role
-    return () => clearInterval(interval); // Cleanup function for interval
-  }, []);
-
-  const handleScrollToSkills = () => {
-    event.preventDefault()
-    const skillsSection = document.getElementById('skills-section');
-    if (skillsSection) {
-      skillsSection.scrollIntoView({ behavior: 'smooth' }); // Smooth scrolling
+    if (aboutRef.current) {
+      observer.observe(aboutRef.current);
     }
-  };
+
+    return () => {
+      if (aboutRef.current) {
+        observer.unobserve(aboutRef.current);
+      }
+    };
+  }, []); // Empty dependency array ensures the effect runs only once
+
 
   return (
-    <section id="about-section" className={styles.about}>
-      <div className={visible ? styles.containerOne : styles.noDisplay}>
-        <div > <span className={styles.hi}>Hi, I am</span></div>
-        <div>
-        <span className={styles.sreeKrishna}>Sree Krishna </span>
-        <span className={styles.suresh}>Suresh</span>
+    <section id="about-section" ref={aboutRef} className={styles.about}>
+      <div className={visible ? styles.aboutInfo: styles.noabout}>
+        <div className = {styles.mydetails}>
+          <img src="\images\about\profile.png" alt="Your Name" className={styles.aboutProfilePicture} />
+          <div className={styles.bio}>
+            <h2>About Me</h2>
+            <p>
+            Welcome to my creative hub! I &apos m Sree Krishna,
+            a dynamic software Developer with a penchant for pushing boundaries
+            and crafting captivating experiences. With a blend of innovation,
+            expertise, and a dash of quirkiness,
+            I thrive on transforming ideas into reality.
+            Whether it &apos s designing immersive user interfaces,
+            crafting compelling narratives, or diving into the depths of data,
+            I&aposm here to bring visions to life.
+            </p>
+            <p>
+              {/* Add links to your social media profiles or portfolio websites */}
+              You can also find me on:
+              <a href="https://www.linkedin.com/in/your-linkedin-profile">LinkedIn</a>
+              {/* Add links to other platforms as needed */}
+            </p>
+          </div>
         </div>
-        <div ><span className={styles.roles}>{roles[roleIndex]}</span></div>
-      </div>
-      <div className={visible ? styles.resume: styles.noDisplay}>
-        <a href="../resources/resume.pdf" download="Sree_Krishna_Suresh_Resume.pdf">
-          RESUME
-        </a>
+        <div className = {styles.myskills}>
+          {/* <Skills /> */}
         </div>
-      <div className={visible ? styles.socialLinks: styles.noDisplay}>
-          <IconButton href="https://www.linkedin.com/in/sree-krishna/" target="_blank" rel="noopener noreferrer">
-              <LinkedInIcon />
-          </IconButton>
-          <IconButton href="https://github.com/Sree-Krishna" target="_blank" rel="noopener noreferrer">
-              <GitHubIcon />
-          </IconButton>
-          <IconButton href="mailto:suesh.sr@northeastern.edu" target="_blank" rel="noopener noreferrer">
-              <MailIcon />
-          </IconButton>
-      </div>
-      <div style={{position: 'absolute', bottom: 0}} className={styles.continerTwo}>
-        <a href="#skills-section" onClick={handleScrollToSkills}>
-          <div className={styles.downArrow}></div>
-        </a>
       </div>
     </section>
   );

@@ -9,9 +9,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: black;
+  /* background-color: black; */
+  background-color: rgba(0, 0, 0, 0.7); 
   padding: 0 20px;
-  opacity: 70%;
+  /* opacity: 70%; */
 }
 
 .leftSide,

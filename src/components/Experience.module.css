@@ -1,9 +1,10 @@
 .experience {
     display: flex;
+    flex-direction: column; /* Change to column */
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: cyan;
+    background-image: url('../resources/port23.jpg');
     background-size: cover;
     background-position: center;
     color: white;
