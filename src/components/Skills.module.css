@@ -8,8 +8,9 @@
 }
 
 .iconCarousel {
-  display: contents;
+  display: flex;
   align-items: center;
+  justify-content: space-between;
   flex: row;
   /* width: fit-content; Adjust width as needed */
   width: 100%;
@@ -54,8 +55,7 @@
 .iconContainer {
   display: flex;
   flex-wrap: wrap; /* Allow icons to wrap to multiple lines */
-  justify-content: space-between; /* Distribute icons evenly */
-  padding-bottom: 10px;
+  justify-content: center; /* Distribute icons evenly */
 }
 
 .icons {
@@ -69,7 +69,7 @@
   text-align: 'center';
   display: block; /* Make the span occupy a full line */
   font-size: 12px;
-  padding:0 5px;
+  padding:5px 5px;
 }
 
 .navigate {
