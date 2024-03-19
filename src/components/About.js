@@ -34,23 +34,23 @@ const About = () => {
     <section id="about-section" ref={aboutRef} className={styles.about}>
       <div className={visible ? styles.aboutInfo: styles.noabout}>
         <div className = {styles.mydetails}>
-          <img src="\images\about\profile.png" alt="Your Name" className={styles.aboutProfilePicture} />
+          <img src="\images\about\profile1.jpg" alt="Sree Krishna Suresh" className={styles.aboutProfilePicture} />
           <div className={styles.bio}>
-            <h2>About Me</h2>
+            <p className={styles.bioAbout}>About Me</p>
             <p>
-            Welcome to my creative hub! I &apos m Sree Krishna,
+            Welcome to my creative hub! I am Sree Krishna,
             a dynamic software Developer with a penchant for pushing boundaries
             and crafting captivating experiences. With a blend of innovation,
             expertise, and a dash of quirkiness,
             I thrive on transforming ideas into reality.
-            Whether it &apos s designing immersive user interfaces,
+            Whether it is designing immersive user interfaces,
             crafting compelling narratives, or diving into the depths of data,
-            I&aposm here to bring visions to life.
+            I am here to bring visions to life.
             </p>
             <p>
               {/* Add links to your social media profiles or portfolio websites */}
-              You can also find me on:
-              <a href="https://www.linkedin.com/in/your-linkedin-profile">LinkedIn</a>
+              My Hobbies:
+              <a href="#about-section"> Photography, Painting, Badminton</a>
               {/* Add links to other platforms as needed */}
             </p>
           </div>

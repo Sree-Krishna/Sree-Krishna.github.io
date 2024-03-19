@@ -39,6 +39,15 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll); // Cleanup
   }, []); // Empty dependency array to run only once
 
+  const handleScrollToSection = (event) => {
+    const index = event.target.href.indexOf("#");
+    event.preventDefault()
+    const scrollSection = document.getElementById(event.target.href.substring(index + 1));
+    if (scrollSection) {
+      scrollSection.scrollIntoView({ behavior: 'smooth' }); // Smooth scrolling
+    }
+  };
+
   return (
     <nav className={styles.nav}>
       <a href="#home-section">
@@ -46,12 +55,12 @@ const Navbar = () => {
       </a>
       <div className={styles.navLink}>
       <span className={`${currentSection === 'home-section' ? styles.active : ''}`}>
-          <a href="#home-section" >
+          <a href="#home-section" onClick={handleScrollToSection}>
             HOME
           </a>
         </span>
         <span className={`${currentSection === 'about-section' ? styles.active : ''}`}>
-          <a href="#about-section" >
+          <a href="#about-section" onClick={handleScrollToSection}>
             ABOUT
           </a>
         </span>
@@ -61,17 +70,17 @@ const Navbar = () => {
           </a>
         </span> */}
         <span className={`${currentSection === 'projects-section' ? styles.active : ''}`}>
-          <a href="#projects-section" >
+          <a href="#projects-section" onClick={handleScrollToSection}>
             PROJECTS
           </a>
         </span>
         <span className={`${currentSection === 'experience-section' ? styles.active : ''}`}>
-          <a href="#experience-section">
+          <a href="#experience-section" onClick={handleScrollToSection}>
             EXPERIENCE
           </a>
         </span>
         <span style={{paddingRight: "20px"}} className={`${currentSection === 'contact-section' ? styles.active : ''}`}>
-          <a href="#contact-section">
+          <a href="#contact-section" onClick={handleScrollToSection}>
             CONTACT
           </a>
         </span>
@@ -79,7 +88,6 @@ const Navbar = () => {
     </nav>
   );
 };
-
 
 
 export default Navbar;

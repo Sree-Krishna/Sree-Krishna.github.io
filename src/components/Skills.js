@@ -25,7 +25,6 @@ const iconsSkills = [[
   { name: 'TypeScript', path: '/images/skills/typescript.png' },
   { name: 'React', path: '/images/skills/react.png' },
   { name: 'Streamlit', path: '/images/skills/streamlit.svg' },
-  { name: 'FastAPI', path: '/images/skills/fastapi.svg' },
   { name: 'Spring', path: '/images/skills/spring.svg' },
   { name: 'HTML5', path: '/images/skills/html.png' },
   { name: 'CSS', path: '/images/skills/css.png' },
@@ -55,6 +54,7 @@ const iconsSkills = [[
   { name: 'Postman', path: '/images/skills/postman.svg' },
   { name: 'Logstash', path: '/images/skills/logstash.svg' },
   { name: 'GraphQL', path: '/images/skills/graphql.svg' },
+  { name: 'FastAPI', path: '/images/skills/fastapi.svg' },
 ]];
 
 
