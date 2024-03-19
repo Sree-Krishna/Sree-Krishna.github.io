@@ -36,7 +36,7 @@ const About = () => {
         <div className = {styles.mydetails}>
           <img src="\images\about\profile1.jpg" alt="Sree Krishna Suresh" className={styles.aboutProfilePicture} />
           <div className={styles.bio}>
-            <p className={styles.bioAbout}>About Me</p>
+            <p className={styles.bioAbout}>ABOUT ME</p>
             <p>
             Welcome to my creative hub! I am Sree Krishna,
             a dynamic software Developer with a penchant for pushing boundaries

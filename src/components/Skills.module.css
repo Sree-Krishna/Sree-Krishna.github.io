@@ -37,6 +37,10 @@
   float: left;
 }
 
+.arrowright{
+  float: right;
+}
+
 .arrow:hover,
 .arrow:focus {
   opacity: 1;

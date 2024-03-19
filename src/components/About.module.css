@@ -21,8 +21,10 @@
   margin-top: 50px;
   transition: opacity 0.8s ease-in-out;
   width: 60%;
-  background-color: rgba(214, 207, 207, 0.3); 
-  box-shadow: 0px 5px 10px rgba(197, 184, 184, 0.7);  
+  background-color: rgba(136, 126, 126, 0.1); 
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5); 
+  /* background-color: rgba(214, 207, 207, 0.3); 
+  box-shadow: 0px 5px 10px rgba(197, 184, 184, 0.7);   */
   padding:30px;
 }
 
@@ -42,7 +44,7 @@
   width: 100%;
   flex-direction: row;
   align-items: flex-end;
-  background-color: rgba(179, 177, 177, 0.3);
+  /* background-color: rgba(179, 177, 177, 0.3); */
 }
 
 .aboutProfilePicture {

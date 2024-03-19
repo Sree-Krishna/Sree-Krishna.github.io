@@ -1,10 +1,57 @@
-.contact {
+.contactSection {
+    text-align: center;
+  }
+  
+  .contactSection h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  .contactSection p {
+    font-size: 1.1em;
+    margin-bottom: 30px;
+  }
+  
+  .contactForm {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    /* background-color: goldenrod; */
-    background-size: cover;
-    background-position: center;
+    flex-direction: column;
+    width: 50%;
+    margin: 0 auto;
+  }
+  
+  .contactForm label {
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .contactForm input,
+  .contactForm textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .contactForm textarea {
+    height: 150px;
+  }
+  
+  .contactForm button {
+    background-color: #4CAF50;
     color: white;
-}
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .contactForm button:hover {
+    background-color: #3e8e41;
+  }
+  
+  /* Optional styles for form submission message */
+  #form-message {
+    /* ... */
+  }
+  
