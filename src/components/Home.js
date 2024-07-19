@@ -42,7 +42,7 @@ const Home = () => {
         <div ><span className={styles.roles}>{roles[roleIndex]}</span></div>
       </div>
       <div className={visible ? styles.resume: styles.noDisplay}>
-        <a href="../resources/resume.pdf" download="Sree_Krishna_Suresh_Resume.pdf">
+        <a href="/resume/resume.pdf" download="Sree_Krishna_Suresh_Resume.pdf">
           RESUME
         </a>
         </div>
