@@ -6,7 +6,7 @@ const iconsSkills = [[
   { name: 'Airflow', path: '/images/skills/airflow.svg' },
   { name: 'TeamCity', path: '/images/skills/teamcity.svg' },
   { name: 'Terraform', path: '/images/skills/terraform.svg' },
-  { name: 'PyCharm', path: '/images/skills/PyCHarm.svg' },
+  { name: 'PyCharm', path: '/images/skills/PyCharm.svg' },
   { name: 'VS Code', path: '/images/skills/VScode.svg' },
   { name: 'Jenkins', path: '/images/skills/jenkins.svg' },
   { name: 'Jira', path: '/images/skills/jira.svg' },
@@ -33,7 +33,7 @@ const iconsSkills = [[
 [
   // Replace these with your actual icon data (names, paths, etc.)
   { name: 'TensorFlow', path: '/images/skills/tensorflow.svg' },
-  { name: 'PyTorch', path: '/images/skills/PyTorch.svg' },
+  { name: 'PyTorch', path: '/images/skills/PyTorch.png' },
   { name: 'Numpy', path: '/images/skills/numpy.svg' },
   { name: 'Pandas', path: '/images/skills/pandas.svg' },
   { name: 'Scikit-Learn', path: '/images/skills/sk-learn.jpg' },
@@ -41,6 +41,7 @@ const iconsSkills = [[
   { name: 'Tableau', path: '/images/skills/tableau.svg' },
   { name: 'PowerBI', path: '/images/skills/powerbi.svg' },
   { name: 'AWS', path: '/images/skills/aws.svg' },
+  { name: 'Azure', path: 'images/skills/azure.svg'},
   { name: 'SageMaker', path: '/images/skills/sagemaker.svg' },
   { name: 'PySpark', path: '/images/skills/apache_spark.svg' },
 ],
